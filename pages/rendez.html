@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/587afe50dc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  
+  <title >MediCare+</title>
+</head>
+
+<body>
+
+  <section class="h-[940px] bg-blue-100 flex flex-col justify-center items-center" >
+    <h1 class="mb-4 font-extrabold  text-gray-800 text-2xl mt-9 text-center">Prendre un nouveau rendez-vous</h1>
+
+    <div class=" bg-gray-600 h-0.5 w-11/12 " ></div>
+
+    <div class="flex flex-col justify-center items-center gap-2">
+      <h3 class="text-[1rem] font-bold mt-5 text-gray-800">Nom et Prénom</h3>
+      <input id="nameInput" type="text" placeholder="Votre nom" class="px-4 rounded-[12px] w-[20rem] border-2 border-gray-500 h-12">
+      <h3 class="text-[1rem] font-bold mt-5 text-gray-800">Nemero do telephone</h3>
+      <input id="phoneInput" type="tel" placeholder="06XXXXXXX" class="rounded-[12px] w-[20rem] border-2 border-gray-500 h-12 px-4">
+      <h3 class="text-[1rem] font-bold mt-5 text-gray-800">Choisissez un médecin</h3>
+      <select id="doctorSelect" class="text-gray-800 rounded-[12px] w-[20rem] border-2 border-gray-500 h-12 px-4">
+        <option value="">Choisissez un médecin</option>
+        <option value="Dc. Badr Fenni">Dc. Badr Fenni</option>
+        <option value="Dc. Ahmed Khan">Dc. Ahmed Khan</option>
+        <option value="Dc. Nour Larbi">Dc. Nour Larbi</option>
+        <option value="Dr. Maria Tony">Dr. Maria Tony</option>
+      </select>
+      <h3 class="text-[1rem] font-bold mt-5 text-gray-800">Date de nomination</h3>
+      <input id="dateInput" type="date" class="rounded-[12px] w-[20rem] border-2 border-gray-500 h-12 px-4">
+      <h3 class="text-[1rem] font-bold mt-5 text-gray-800">heure du rendez-vous</h3>
+      <select id="timeSelect" class="rounded-[12px] w-[20rem] border-2 border-gray-500 h-12 px-4 mb-3">
+        <option value="9:30">9:30</option>
+        <option value="11:00">11:00</option>
+        <option value="15:15">15:15</option>
+        <option value="18:30">18:30</option>
+      </select>
+
+      <a href="#" id="RendezBtn" class=" mt-2.5 px-6 py-3 bg-blue-700 text-white rounded-[15px] text-[20px]  hover:bg-blue-600 transition">Prendre rendez-vous</a>
+
+
+      <div id="todocontainer">
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+    <header>
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-amber-50 h-20 flex items-center justify-between px-10 shadow-md z-50">
+      <h2 id="logo" class="text-2xl font-bold text-[#08517b]">
+        Medi<span class="text-green-600">Care+</span>
+      </h2>
+
+      <ul class="flex flex-row gap-10 text-gray-700 font-medium hidden md:flex flex-row gap-10 text-gray-700 font-medium" >
+        <li><a href="/index.html" class="hover:text-blue-700 transition">Accueil</a></li>
+        <li><a href="/pages/medcins.html" class="hover:text-blue-700 transition">Médecins</a></li>
+        <li><a href="/pages/rendez.html" class="hover:text-blue-700 transition">Rendez-vous</a></li>
+        <li>
+          <button href="/pages/rendez.html" id="RendezBtn1" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">
+            Prendre rendez-vous
+          </button>
+        </li>
+      </ul>
+
+      <div class="md:hidden relative">
+  <button id="menuBtn" class="text-3xl text-[#08517b] focus:outline-none">☰</button>
+
+  <div id="mobileMenu" class="hidden fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-amber-50 flex flex-col items-center justify-center gap-6 z-50 transition-all duration-300 shadow-lg">
+      <a href="/index.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Accueil</a>
+      <a href="/pages/medcins.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Médecins</a>
+      <a href="/pages/rendez.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Rendez-vous</a>
+      <a href="/pages/rendez.html" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">Prendre rendez-vous</a>
+  </div>
+
+</div>
+    </nav>
+  </header>
+    
+
+    <footer class="bg-[#2C7873] h-28 pt-2.5 grid items-center justify-center ">
+        <h3 class="text-[#fff] text-center text-[14px]"> <i class="fa-solid fa-location-dot"></i>  123 Rue de la Santé, Nador</h3>
+        <h3 class="text-[#fff] text-center text-[14px]"><i class="fa-solid fa-phone"></i> +212 769507807</h3>
+        <h3 class="text-[#fff] text-center text-[14px]" ><i class="fa-solid fa-envelope"></i> salutbadr47@gmail.com</h3>
+        <div class="h-0.5 w-2xl bg-[#dadada]"></div>
+        <p class="text-[#e3e3e3]">© 2023 Conseils Santé du Jour. Tous droits réservés.</p>
+    </footer>
+
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBtn = document.getElementById('menuBtn');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+
+    const RendBtn = document.getElementById('RendezBtn');
+    const Todo = document.getElementById('todocontainer');
+    const nameInput = document.getElementById('nameInput');
+    const phoneInput = document.getElementById('phoneInput');
+    const doctorSelect = document.getElementById('doctorSelect');
+    const dateInput = document.getElementById('dateInput');
+    const timeSelect = document.getElementById('timeSelect');
+
+    function isValidPhone(phone) {
+        return /^[0-9+\-\s]{6,}$/.test(phone);
+    }
+
+    function saveFormData() {
+        const formData = {
+            name: nameInput.value,
+            phone: phoneInput.value,
+            doctor: doctorSelect.value,
+            date: dateInput.value,
+            time: timeSelect.value
+        };
+        localStorage.setItem('appointmentFormData', JSON.stringify(formData));
+    }
+
+    function loadFormData() {
+        const savedData = localStorage.getItem('appointmentFormData');
+        if (savedData) {
+            const formData = JSON.parse(savedData);
+            nameInput.value = formData.name || '';
+            phoneInput.value = formData.phone || '';
+            doctorSelect.value = formData.doctor || '';
+            dateInput.value = formData.date || '';
+            timeSelect.value = formData.time || '';
+        }
+    }
+
+    function saveAppointmentToStorage(appointment) {
+        let existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
+        existingAppointments.push(appointment);
+        localStorage.setItem('appointments', JSON.stringify(existingAppointments));
+    }
+
+    function displayAppointments() {
+        const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+        
+        if (appointments.length === 0) {
+            Todo.innerHTML = '<p class="text-gray-500 text-center mt-4">Aucun rendez-vous planifié</p>';
+            return;
+        }
+
+        let appointmentsHTML = '<h3 class="text-xl font-bold mb-4 mt-8 text-center">Vos Rendez-vous</h3>';
+        
+        appointments.forEach(appointment => {
+            appointmentsHTML += `
+                <div class="bg-white p-4 rounded-lg shadow-md mb-3 border-l-4 border-blue-500">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold text-gray-800">${appointment.name}</h4>
+                            <p class="text-sm text-gray-600">Médecin: ${appointment.doctor}</p>
+                            <p class="text-sm text-gray-600">Date: ${appointment.date} à ${appointment.time}</p>
+                            <p class="text-sm text-gray-600">Téléphone: ${appointment.phone}</p>
+                        </div>
+                        <button onclick="deleteAppointment(${appointment.id})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm transition">
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+        
+        Todo.innerHTML = appointmentsHTML;
+    }
+
+    window.deleteAppointment = function(appointmentId) {
+        let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+        appointments = appointments.filter(appointment => appointment.id !== appointmentId);
+        localStorage.setItem('appointments', JSON.stringify(appointments));
+        displayAppointments();
+    }
+
+    if (RendBtn && Todo) {
+        RendBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const name = (nameInput && nameInput.value || '').trim();
+            const phone = (phoneInput && phoneInput.value || '').trim();
+            const doctor = (doctorSelect && doctorSelect.value) || '';
+            const date = (dateInput && dateInput.value) || '';
+            const time = (timeSelect && timeSelect.value) || '';
+
+            if (!name || !phone || !doctor || !date || !time) {
+                alert("Veuillez remplir tous les champs !");
+                return;
+            }
+
+            if (!isValidPhone(phone)) {
+                alert("Veuillez entrer un numéro de téléphone valide.");
+                return;
+            }
+
+            const newAppointment = {
+                id: Date.now(),
+                name: name,
+                phone: phone,
+                doctor: doctor,
+                date: date,
+                time: time,
+                createdAt: new Date().toISOString()
+            };
+
+            saveAppointmentToStorage(newAppointment);
+
+            localStorage.removeItem('appointmentFormData');
+
+            const message = document.createElement('div');
+            message.classList.add('bg-green-500', 'text-white', 'p-4', 'rounded-lg', 'mt-4', 'font-bold', 'shadow-md', 'text-center');
+            message.textContent = `Rendez-vous confirmé pour ${name} avec ${doctor} le ${date} à ${time}.`;
+
+            Todo.insertBefore(message, Todo.firstChild);
+
+            nameInput.value = '';
+            phoneInput.value = '';
+            doctorSelect.value = '';
+            dateInput.value = '';
+            timeSelect.value = '';
+
+            setTimeout(() => {
+                displayAppointments();
+            }, 2000);
+        });
+    }
+
+    nameInput.addEventListener('input', saveFormData);
+    phoneInput.addEventListener('input', saveFormData);
+    doctorSelect.addEventListener('change', saveFormData);
+    dateInput.addEventListener('change', saveFormData);
+    timeSelect.addEventListener('change', saveFormData);
+
+    loadFormData();
+    displayAppointments();
+});
+   </script>
+
+
+
+</body>
+
+</html>
+

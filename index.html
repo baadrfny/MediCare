@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/587afe50dc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  
+  <title >MediCare+</title>
+</head>
+
+<body class="font-[Inter] m-0 p-0">
+
+  <!-- Navbar -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-amber-50 h-20 flex items-center justify-between px-10 shadow-md z-50">
+      <h2 id="logo" class="text-2xl font-bold text-[#08517b]">
+        Medi<span class="text-green-600">Care+</span>
+      </h2>
+
+      <ul class="flex flex-row gap-10 text-gray-700 font-medium hidden md:flex flex-row gap-10 text-gray-700 font-medium" >
+        <li><a href="/index.html" class="hover:text-blue-700 transition">Accueil</a></li>
+        <li><a href="/pages/medcins.html" class="hover:text-blue-700 transition">Médecins</a></li>
+        <li><a href="/pages/rendez.html" class="hover:text-blue-700 transition">Rendez-vous</a></li>
+        <li>
+          <a href="/pages/rendez.html" id="RendezBtn1" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">
+            Prendre rendez-vous
+          </a>
+        </li>
+      </ul>
+
+      <div class="md:hidden relative">
+  <button id="menuBtn" class="text-3xl text-[#08517b] focus:outline-none">☰</button>
+
+  <div id="mobileMenu" class="hidden fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-amber-50 flex flex-col items-center justify-center gap-6 z-50 transition-all duration-300 shadow-lg">
+      <a href="#" class="text-gray-700 font-medium hover:text-blue-700 transition">Accueil</a>
+      <a href="/pages/medcins.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Médecins</a>
+      <a href="/pages/rendez.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Rendez-vous</a>
+      <a href="/pages/rendez.html" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">Prendre rendez-vous</a>
+  </div>
+
+</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="flex flex-col md:flex-row bg-gradient-to-r from-[#376979] to-[#8bd2e3] min-h-[480px] mt-[80px] w-full items-center justify-between px-4 md:px-10 pt-20 md:pt-0">
+    
+    <div class="rightSide text-white w-full md:w-1/2 text-left md:pr-10 px-4 py-8 md:py-0">
+      <h3 class="text-lg md:text-xl mb-4">
+        <i class="fa-solid fa-suitcase-medical"></i> Bienvenue Chez MediCare
+      </h3>
+      <h1 class="text-2xl md:text-4xl font-bold mb-4 leading-snug">
+        Prendre soin de votre santé est notre priorité absolue.
+      </h1>
+      <p class="text-sm md:text-base mb-6 leading-relaxed">
+        Être en bonne santé ne se limite pas à ne pas tomber malade.  
+        C'est un bien-être mental, physique et social.
+      </p>
+      <button class="px-4 py-2 md:px-6 md:py-3 bg-green-400 text-white rounded-2xl hover:bg-green-500 transition text-sm md:text-base">
+        Prendre rendez-vous
+      </button>
+    </div>
+
+    <div class="img-left w-full md:w-1/2 h-auto">
+      <img src="/img/fix.png" alt="illustration" class="heroImg w-full h-auto md:h-full object-cover">
+    </div>
+
+</section>
+
+<div class="min-h-screen flex justify-center items-center p-4 md:p-14">
+    <div class="relative bg-amber-50 flex flex-col items-center justify-center h-auto w-full max-w-4xl p-4 md:p-8 rounded-2xl mx-auto">
+        <h2 class="text-[#284a56] text-xl md:text-4xl font-bold text-center mb-2">Conseils Santé du Jour</h2>
+        <h4 class="text-[#284a56] text-center text-xs md:text-base mb-6 md:mb-8">Des conseils pratiques pour votre bien-être quotidien</h4>
+        
+        <!-- Carousel Container -->
+        <div class="relative w-full overflow-hidden rounded-2xl">
+            <div id="carousel-wrapper" class="flex transition-transform duration-500 ease-in-out w-full">
+                <!-- Slide 1 -->
+                <div class="w-full flex-shrink-0 flex justify-center px-2 md:px-4">
+                    <div class="flex flex-col gap-3 md:gap-5 h-auto md:h-[300px] rounded-2xl w-full max-w-2xl bg-[#e5e5e5] items-center justify-center shadow-lg shadow-blue-400/50 p-3 md:p-5">
+                        <div class="w-12 h-12 md:w-20 md:h-20 bg-[#284a5628] rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-virus-covid text-lg md:fa-2x text-[#0068a4]"></i>
+                        </div>
+                        <h2 class="text-[#284a56] text-center font-bold text-sm md:text-base">Conseil 1:</h2>
+                        <p class="text-[#284a56] text-center text-xs md:text-sm">
+                            Consommez au moins 5 portions de fruits et légumes par jour. 
+                            Variez les couleurs dans votre assiette.
+                        </p>
+                        <div class="border-l-[#A18600] border-l-4 md:border-l-8 rounded-2xl h-12 md:h-14 flex items-center justify-center">
+                            <p class="text-[#A18600] text-center p-2 md:p-6 rounded-lg text-xs md:text-sm">
+                                Astuce : Utilisez les escaliers plutôt que l'ascenseur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="w-full flex-shrink-0 flex justify-center px-2 md:px-4">
+                    <div class="flex flex-col gap-3 md:gap-5 h-auto md:h-[300px] rounded-2xl w-full max-w-2xl bg-[#e5e5e5] items-center justify-center shadow-lg shadow-blue-400/50 p-3 md:p-5">
+                        <div class="w-12 h-12 md:w-20 md:h-20 bg-[#284a5628] rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-virus-covid text-lg md:fa-2x text-[#0068a4]"></i>
+                        </div>
+                        <h2 class="text-[#284a56] text-center font-bold text-sm md:text-base">Conseil 2:</h2>
+                        <p class="text-[#284a56] text-center text-xs md:text-sm">
+                            Buvez au moins 1,5 litre d'eau par jour pour rester hydraté.
+                        </p>
+                        <div class="border-l-[#A18600] border-l-4 md:border-l-8 rounded-2xl h-12 md:h-14 flex items-center justify-center">
+                            <p class="text-[#A18600] text-center p-2 md:p-6 rounded-lg text-xs md:text-sm">
+                                Astuce : Gardez une bouteille d'eau à portée de main.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="w-full flex-shrink-0 flex justify-center px-2 md:px-4">
+                    <div class="flex flex-col gap-3 md:gap-5 h-auto md:h-[300px] rounded-2xl w-full max-w-2xl bg-[#e5e5e5] items-center justify-center shadow-lg shadow-blue-400/50 p-3 md:p-5">
+                        <div class="w-12 h-12 md:w-20 md:h-20 bg-[#284a5628] rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-virus-covid text-lg md:fa-2x text-[#0068a4]"></i>
+                        </div>
+                        <h2 class="text-[#284a56] text-center font-bold text-sm md:text-base">Conseil 3:</h2>
+                        <p class="text-[#284a56] text-center text-xs md:text-sm">
+                            Mangez au moins 5 portions de fruits et légumes par jour pour rester en bonne santé.
+                        </p>
+                        <div class="border-l-[#A18600] border-l-4 md:border-l-8 rounded-2xl h-12 md:h-14 flex items-center justify-center">
+                            <p class="text-[#A18600] text-center p-2 md:p-6 rounded-lg text-xs md:text-sm">
+                                Astuce : Préparez vos fruits et légumes à l'avance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="carousel-prev" class="absolute left-1 md:left-4 top-1/2 transform -translate-y-1/2 bg-[#284a56] text-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center hover:bg-[#1a3640] transition-colors z-10 text-sm md:text-base">
+                ‹
+            </button>
+            <button id="carousel-next" class="absolute right-1 md:right-4 top-1/2 transform -translate-y-1/2 bg-[#284a56] text-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center hover:bg-[#1a3640] transition-colors z-10 text-sm md:text-base">
+                ›
+            </button>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="flex justify-center mt-4 md:mt-6 gap-2 md:gap-3">
+            <button class="carousel-dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#284a56] transition-all" data-slide="0"></button>
+            <button class="carousel-dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-300 transition-all" data-slide="1"></button>
+            <button class="carousel-dot w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-300 transition-all" data-slide="2"></button>
+        </div>
+    </div>
+</div>
+
+<section id="Recherche" class="  flex justify-center items-center p-14">
+    <div class=" swiper-slide h-auto rounded-2xl w-full md:w-3/4 lg:w-3/4 swiper-slide h-auto rounded-2xl w-3/4 bg-[#C6D8E6] shadow-2xs  flex flex-col  items-center">
+    <h2 class="text-[#284a56] text-4xl font-bold text-center mt-7">Recherche</h2>
+    <h4 class="text-[#284a56] text-center">Trouvez rapidement des articles</h4>
+    <input type="text" id="search" placeholder="Recherche une article" onkeyup="search()" class=" w-[15rem] md:w-4/5 w-4/5 border-2 border-[#636b72] m-8 p-3 rounded-2xl bg-blue-100">
+
+    <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4"> Articles</h2>
+            <p class="text-gray-600 text-center mb-12">Les articles plus lus</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 m-9 ">
+
+                <!-- Article 1-->
+                <div class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden shadow-[#5092ab]  hover:shadow-[#284a56] transform transition  duration-300 hover:scale-105">
+                    <div class="h-48  flex items-center justify-center ">
+                        
+                        <img src="/img/article/download (2).jpeg " class="w-full h-[200px] object-cover object-center block" alt="">
+
+                    </div>
+                    <div class="p-6 text-center felx flex-col gap-4">
+                        <h3 class=" header  text-[16px] font-bold text-gray-800 mb-2" id="header">Le Sommeil :</h3>
+                        <p class="text-[#284a56] text-[12px] font-semibold mb-2">Un sommeil de qualité n'est pas un luxe, c'est une nécessité biologique. Pendant que vous dormez u'une simple gymnastique...</p>
+                        <div class="flex flex-col justify-center items-center">
+                            <button type="button" class=" bottom-[10px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 mt-5">Savoir Plus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2-->
+                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden shadow-[#5092ab]  hover:shadow-[#284a56] hover:shadow-xl transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
+                        <img src="/img/article/Free Lifestyle Medicine Guide_ Heal with Habits, Not Prescriptions.jpeg" class="w-full h-full object-cover object-center block" alt="">
+
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class=" header  text-[16px] font-bold text-gray-800 mb-2" id="header">Le Sport :</h3>
+                        <p class="text-[#284a56] text-[12px] font-semibold mb-2">Pratiquer une activité physique régulière est l'un des piliers d'une vie saine. Au-delà de sculpter votre corps, le sport renforce votre cœur...</p>
+                        <div class="flex flex-col justify-center items-center">
+                            <button type="button" class=" bottom-[10px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ">Savoir Plus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden shadow-[#5092ab]  hover:shadow-[#284a56] hover:shadow-xl transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
+                       <img src="/img/article/Fuel your body, feed your goals_ Healthy eating….jpeg" class="w-full h-[200px] object-cover object-center block" alt="">
+
+                    </div>
+                    <div class="p-6 text-center flex flex-col ">
+                        <h3 class=" header  text-[16px] font-bold text-gray-800 mb-2" id="header">Une Alimentation Saine :</h3>
+                        <p class="text-[#284a56] text-[12px] font-semibold mb-2">« Que ton aliment soit ta première médecine », disait Hippocrate. Une alimentation saine est varie Lorem ipsum dolor sit...</p>
+                        <div class="flex flex-col justify-center items-center">
+                            <button type="button" class= "  bottom-[10px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ">Savoir Plus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  4 Article-->
+                <div  class= " doctor bg-white rounded-2xl shadow-lg overflow-hidden shadow-[#5092ab]  hover:shadow-[#284a56] hover:shadow-xl transform transition duration-300 hover:scale-105 ">
+                    <div class="h-48 bg-gradient-to-br from-[#237d9d] to-[#284a56] flex items-center justify-center">
+                        <img src="/img/article/How Often Should You Do Yoga_ (Regular Practice Gets Results).jpeg" class="w-full h-full object-cover object-center block">
+                    </div>
+                    <div class="p-6 text-center flex flex-col">
+                        <h3 class=" header  text-[16px] font-bold text-gray-800 mb-2">Le Yoga :</h3>
+                        <p class="text-[#284a56] text-[12px] font-semibold mb-2">Le yoga est bien plus qu'une simple gymnastique. Cette pratique ancestrale associe le aqu'une simple gymnastique ca veut dire que les sportifes ...</p>
+                        <div class="flex flex-col justify-center items-center">
+                            <button type="button" class="  bottom-[10px] bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ">Savoir Plus</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-[#2C7873] h-auto py-4 md:py-2.5 grid items-center justify-center px-4">
+  <h3 class="text-[#fff] text-center text-xs md:text-sm">
+    <i class="fa-solid fa-location-dot"></i> 123 Rue de la Santé, Nador
+  </h3>
+  <h3 class="text-[#fff] text-center text-xs md:text-sm">
+    <i class="fa-solid fa-phone"></i> +212 769507807
+  </h3>
+  <h3 class="text-[#fff] text-center text-xs md:text-sm">
+    <i class="fa-solid fa-envelope"></i> salutbadr47@gmail.com
+  </h3>
+  <div class="h-0.5 w-full bg-[#dadada] my-2"></div>
+  <p class="text-[#e3e3e3] text-xs md:text-sm text-center">© 2023 Conseils Santé du Jour. Tous droits réservés.</p>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.getElementById('carousel-wrapper');
+    const prev = document.getElementById('carousel-prev');
+    const next = document.getElementById('carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (!wrapper) return;
+    
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.w-full.flex-shrink-0');
+    const totalSlides = slides.length;
+    let interval;
+    
+    function showSlide(index) {
+        const translateX = -index * 100;
+        wrapper.style.transform = `translateX(${translateX}%)`;
+        
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('bg-[#284a56]');
+                dot.classList.remove('bg-gray-300');
+            } else {
+                dot.classList.remove('bg-[#284a56]');
+                dot.classList.add('bg-gray-300');
+            }
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+    
+    function startAutoPlay() {
+        interval = setInterval(nextSlide, 3000);
+    }
+    
+    function stopAutoPlay() {
+        clearInterval(interval);
+    }
+    
+    
+    prev.addEventListener('click', () => {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+    });
+    
+    next.addEventListener('click', () => {
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
+    });
+    
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopAutoPlay();
+            currentIndex = index;
+            showSlide(currentIndex);
+            startAutoPlay();
+        });
+    });
+    
+    
+    wrapper.parentElement.addEventListener('mouseenter', stopAutoPlay);
+    wrapper.parentElement.addEventListener('mouseleave', startAutoPlay);
+    
+    
+    showSlide(currentIndex);
+    startAutoPlay();
+    });
+    
+
+    function search() {
+      let searchBar = document.getElementById('search').value.toUpperCase();
+      let doctor = document.getElementsByClassName('doctor');
+      let DcName = document.querySelectorAll('.header');
+
+      for (let i = 0; i < DcName.length; i++) {
+        if(DcName[i].innerHTML.toUpperCase().includes(searchBar)){
+          doctor[i].style.display = "block";
+        }
+        else{
+          doctor[i].style.display = "none";
+        }
+        
+      }
+    }
+
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBtn = document.getElementById('menuBtn');
+
+    menuBtn.addEventListener('click', () =>{
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
