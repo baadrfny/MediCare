@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/587afe50dc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  
+  <title >MediCare+</title>
+</head>
+<body>
+    <header>
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-amber-50 h-20 flex items-center justify-between px-10 shadow-md z-50">
+      <h2 id="logo" class="text-2xl font-bold text-[#08517b]">
+        Medi<span class="text-green-600">Care+</span>
+      </h2>
+
+      <ul class="flex flex-row gap-10 text-gray-700 font-medium hidden md:flex flex-row gap-10 text-gray-700 font-medium" >
+        <li><a href="index.html" class="hover:text-blue-700 transition">Accueil</a></li>
+        <li><a href="medcins.html" class="hover:text-blue-700 transition">Médecins</a></li>
+        <li><a href="/rendez.html" class="hover:text-blue-700 transition">Rendez-vous</a></li>
+        <li>
+          <a href="rendez.html" id="RendezBtn1" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">
+            Prendre rendez-vous
+          </a>
+        </li>
+      </ul>
+
+      <div class="md:hidden relative">
+  <button id="menuBtn" class="text-3xl text-[#08517b] focus:outline-none">☰</button>
+
+  <div id="mobileMenu" class="hidden fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-amber-50 flex flex-col items-center justify-center gap-6 z-50 transition-all duration-300 shadow-lg">
+      <a href="index.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Accueil</a>
+      <a href="medcins.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Médecins</a>
+      <a href="rendez.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Rendez-vous</a>
+      <a href="rendez.html" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">Prendre rendez-vous</a>
+  </div>
+
+</div>
+    </nav>
+  </header>
+
+  <section id="Recherche" class="  flex justify-center items-center p-14 mt-20">
+  <div class=" swiper-slide h-auto rounded-2xl w-full md:w-3/4 lg:w-3/4 swiper-slide h-auto rounded-2xl w-3/4 bg-[#C6D8E6] shadow-2xs  flex flex-col  items-center">
+    <h2 class="text-[#284a56] text-4xl font-bold text-center mt-7">Recherche</h2>
+    <h4 class="text-[#284a56] text-center">Trouvez rapidement des articles ou des médecins</h4>
+    <input type="text" id="search" placeholder="Recherche un médecin" onkeyup="search()" class=" w-[14rem] md:w-4/5 w-4/5 border-2 border-[#636b72] m-8 p-3 rounded-2xl bg-blue-100">
+
+    <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4"> Médecins</h2>
+            <p class="text-gray-600 text-center mb-12">Les meilleurs médecins spécialistes pour votre santé</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 m-9 ">
+
+                <!-- Docotor 1-->
+                <div class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#4caed2] to-[#284a56] flex items-center justify-center">
+                        
+                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
+                            <img src="/img/A male doctor with a stethoscope on his neck.jpeg " class="w-full h-full object-cover object-center block" alt="">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Badr Fenni</h3>
+                        <p class="text-blue-600 font-semibold mb-2">CHRONOPS</p>
+                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
+                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
+                            15 ans d'expérience
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctor 2-->
+                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
+                            <img src="/img/download (3).jpeg" class="w-full h-full object-cover object-center block" alt="">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Maria Tony</h3>
+                        <p class="text-green-600 font-semibold mb-2">Chronopédie 7/9</p>
+                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
+                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
+                            9 ans d'expérience
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
+                            <img src="/img/download (2).jpeg" class="w-full h-full object-cover object-center block" alt="">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Nour Larbi</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Chronopédie 7/9</p>
+                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
+                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
+                            4 ans d'expérience
+                        </p>
+                    </div>
+                </div>
+
+                <!--  4 Doctor -->
+                <div  class= " doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-gradient-to-br from-[#4caed2] to-[#284a56] flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
+                            <img src="/img/doctor image.jpeg" class="w-full h-full object-cover object-center block" alt="">
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class=" header text-xl font-bold text-gray-800 mb-2">Dr. Ahmed Khan</h3>
+                        <p class="text-rose-600 font-semibold mb-2">Cardiologie Avancée</p>
+                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
+                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
+                            12 ans d'expérience
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+  </div>
+</section>
+
+
+<footer class="bg-[#2C7873] h-28 pt-2.5 grid items-center justify-center ">
+  <h3 class="text-[#fff] text-center text-[14px]"> <i class="fa-solid fa-location-dot"></i>  123 Rue de la Santé, Nador</h3>
+  <h3 class="text-[#fff] text-center text-[14px]"><i class="fa-solid fa-phone"></i> +212 769507807</h3>
+  <h3 class="text-[#fff] text-center text-[14px]" ><i class="fa-solid fa-envelope"></i> salutbadr47@gmail.com</h3>
+  <div class="h-0.5 w-2xl bg-[#dadada]"></div>
+  <p class="text-[#e3e3e3]">© 2023 Conseils Santé du Jour. Tous droits réservés.</p>
+</footer>
+
+    
+
+<script>
+function search() {
+      let searchBar = document.getElementById('search').value.toUpperCase();
+      let doctor = document.getElementsByClassName('doctor');
+      let DcName = document.querySelectorAll('.header');
+
+
+      for (let i = 0; i < DcName.length; i++) {
+        if(DcName[i].innerHTML.toUpperCase().includes(searchBar)){
+          doctor[i].style.display = "block";
+        }
+        else{
+          doctor[i].style.display = "none";
+        }
+        
+      }
+    }
+
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBtn =document.getElementById('menuBtn');
+
+    menuBtn.addEventListener('click', () =>{
+      mobileMenu.classList.toggle('hidden');
+      burgerBtn.classList.toggle('rotate-90');
+
+    })
+    mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+      });
+    });
+    </script>
+</body>
+</html>
