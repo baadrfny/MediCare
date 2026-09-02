@@ -1,208 +1,309 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MediCare+ — Les meilleurs médecins spécialistes pour votre santé. Trouvez rapidement un médecin et prenez rendez-vous." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/587afe50dc.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/assets/style.css">
-  
-  <title >MediCare+</title>
-</head>
-<body>
-    <header>
-    <nav id="navbar" class="fixed top-0 left-0 w-full bg-amber-50 h-20 flex items-center justify-between px-10 shadow-md z-50">
-      <h2 id="logo" class="text-2xl font-bold text-[#08517b]">
-        Medi<span class="text-green-600">Care+</span>
-      </h2>
+  <script src="https://kit.fontawesome.com/587afe50dc.js" crossorigin="anonymous" defer></script>
 
-      <ul class="flex flex-row gap-10 text-gray-700 font-medium hidden md:flex flex-row gap-10 text-gray-700 font-medium" >
-        <li><a href="index.html" class="hover:text-blue-700 transition">Accueil</a></li>
-        <li><a href="medcins.html" class="hover:text-blue-700 transition">Médecins</a></li>
-        <li><a href="rendez.html" class="hover:text-blue-700 transition">Rendez-vous</a></li>
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <title>MediCare+ | Nos médecins</title>
+</head>
+
+<body class="font-['Plus_Jakarta_Sans',sans-serif] bg-slate-950 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
+    Aller au contenu principal
+  </a>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md h-20 flex items-center justify-between px-6 md:px-16 shadow-sm border-b border-slate-100 z-50 transition-shadow duration-300">
+      <a href="index.html" class="text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1">
+        Medi<span class="text-teal-600">Care+</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-slate-600 font-semibold text-sm">
+        <li><a href="index.html" class="relative py-2 hover:text-teal-600 transition-colors after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-teal-600 hover:after:w-full after:transition-all">Accueil</a></li>
+        <li><a href="medcins.html" aria-current="page" class="relative py-2 text-teal-600 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:bg-teal-600 transition-all">Médecins</a></li>
+        <li><a href="rendez.html" class="relative py-2 hover:text-teal-600 transition-colors after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-teal-600 hover:after:w-full after:transition-all">Rendez-vous</a></li>
         <li>
-          <a href="rendez.html" id="RendezBtn1" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">
+          <a href="rendez.html" id="RendezBtn1" class="px-5 py-2.5 bg-teal-600 text-white font-medium rounded-full hover:bg-teal-700 hover:shadow-lg hover:shadow-teal-600/30 transition-all duration-300 active:scale-95">
             Prendre rendez-vous
           </a>
         </li>
       </ul>
 
-      <div class="md:hidden relative">
-  <button id="menuBtn" class="text-3xl text-[#08517b] focus:outline-none">☰</button>
-
-  <div id="mobileMenu" class="hidden fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-amber-50 flex flex-col items-center justify-center gap-6 z-50 transition-all duration-300 shadow-lg">
-      <a href="/index.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Accueil</a>
-      <a href="medcins.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Médecins</a>
-      <a href="rendez.html" class="text-gray-700 font-medium hover:text-blue-700 transition">Rendez-vous</a>
-      <a href="rendez.html" class="px-4 py-2 bg-blue-700 text-white rounded-full hover:bg-blue-600 transition">Prendre rendez-vous</a>
-  </div>
-
-</div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-2xl text-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 p-2 rounded-lg hover:bg-slate-100 transition" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </nav>
+
+    <div id="mobileMenuBackdrop" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40"></div>
+    <div id="mobileMenu" class="hidden fixed top-0 right-0 h-screen w-4/5 max-w-sm bg-white flex-col items-start p-8 gap-2 z-50 transition-transform duration-300 shadow-2xl">
+      <button id="closeMenuBtn" class="self-end text-2xl text-slate-500 hover:text-slate-800 mb-6 p-2 -mr-2" aria-label="Fermer le menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <a href="index.html" class="text-slate-800 font-semibold text-lg hover:text-teal-600 transition w-full py-3 border-b border-slate-100">Accueil</a>
+      <a href="medcins.html" class="text-teal-600 font-semibold text-lg transition w-full py-3 border-b border-slate-100">Médecins</a>
+      <a href="rendez.html" class="text-slate-800 font-semibold text-lg hover:text-teal-600 transition w-full py-3 border-b border-slate-100">Rendez-vous</a>
+      <a href="rendez.html" class="w-full text-center px-5 py-3 bg-teal-600 text-white font-semibold rounded-xl hover:bg-teal-700 shadow-lg shadow-teal-600/20 transition mt-6">Prendre rendez-vous</a>
+    </div>
   </header>
 
-  <section id="Recherche" class="  flex justify-center items-center p-14 mt-20">
-  <div class=" swiper-slide h-auto rounded-2xl w-full md:w-3/4 lg:w-3/4 swiper-slide h-auto rounded-2xl w-3/4 bg-[#C6D8E6] shadow-2xs  flex flex-col  items-center">
-    <h2 class="text-[#284a56] text-4xl font-bold text-center mt-7">Recherche</h2>
-    <h4 class="text-[#284a56] text-center">Trouvez rapidement des articles ou des médecins</h4>
-    <input type="text" id="search" placeholder="Recherche un médecin" onkeyup="search()" class=" w-[14rem] md:w-4/5 w-4/5 border-2 border-[#636b72] m-8 p-3 rounded-2xl bg-blue-100">
+  <main id="main">
 
-    <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4"> Médecins</h2>
-            <p class="text-gray-600 text-center mb-12">Les meilleurs médecins spécialistes pour votre santé</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 m-9 ">
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="pt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white overflow-hidden border-b border-slate-800">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.15),transparent_50%)] pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-6 md:px-16 py-16 md:py-24 text-center">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-sm font-medium mb-6">
+          <i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Nos spécialistes
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+          Les meilleurs médecins pour votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-400">santé</span>
+        </h1>
+        <p class="text-slate-300 text-base md:text-lg max-w-xl mx-auto">
+          Trouvez rapidement le spécialiste qu'il vous faut et prenez rendez-vous en toute simplicité.
+        </p>
+      </div>
+    </section>
 
-                <!-- Docotor 1-->
-                <div class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105">
-                    <div class="h-48 bg-gradient-to-br from-[#4caed2] to-[#284a56] flex items-center justify-center">
-                        
-                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
-                            <img src="/img/A male doctor with a stethoscope on his neck.jpeg " class="w-full h-full object-cover object-center block" alt="">
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Badr Fenni</h3>
-                        <p class="text-blue-600 font-semibold mb-2">CHRONOPS</p>
-                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
-                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
-                            15 ans d'expérience
-                        </p>
-                    </div>
-                </div>
+    <!-- ============ DOCTORS ============ -->
+    <section id="Recherche" class="py-16 bg-slate-950 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 md:px-16">
 
-                <!-- Doctor 2-->
-                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105">
-                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
-                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
-                            <img src="/img/download (3).jpeg" class="w-full h-full object-cover object-center block" alt="">
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Maria Tony</h3>
-                        <p class="text-green-600 font-semibold mb-2">Chronopédie 7/9</p>
-                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
-                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
-                            9 ans d'expérience
-                        </p>
-                    </div>
-                </div>
+        <div class="max-w-xl mx-auto text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">Centre de recherche</h2>
+          <p class="text-slate-400 mb-8">Trouvez rapidement un médecin par son nom</p>
 
-                <!-- Doctor 3 -->
-                <div  class=" doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform transition duration-300 hover:scale-105">
-                    <div class="h-48 bg-gradient-to-br from-[#25ce7c] to-[#0f2c25] flex items-center justify-center">
-                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
-                            <img src="/img/download (2).jpeg" class="w-full h-full object-cover object-center block" alt="">
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class=" header text-xl font-bold text-gray-800 mb-2" id="header">Dr. Nour Larbi</h3>
-                        <p class="text-purple-600 font-semibold mb-2">Chronopédie 7/9</p>
-                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
-                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
-                            4 ans d'expérience
-                        </p>
-                    </div>
-                </div>
-
-                <!--  4 Doctor -->
-                <div  class= " doctor bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform transition duration-300 hover:scale-105">
-                    <div class="h-48 bg-gradient-to-br from-[#4caed2] to-[#284a56] flex items-center justify-center">
-                        <div class="w-32 h-32 bg-white rounded-full border-4 border-white shadow-lg flex items-center justify-center rounded-full overflow-hidden">
-                            <img src="/img/doctor image.jpeg" class="w-full h-full object-cover object-center block" alt="">
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class=" header text-xl font-bold text-gray-800 mb-2">Dr. Ahmed Khan</h3>
-                        <p class="text-rose-600 font-semibold mb-2">Cardiologie Avancée</p>
-                        <div class="flex items-center justify-center gap-2 text-amber-500 mb-4">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 bg-amber-50 py-2 px-4 rounded-full inline-block">
-                            <i class="fa-solid fa-briefcase-medical mr-2"></i>
-                            12 ans d'expérience
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+          <div class="relative w-full">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" aria-hidden="true"></i>
+            <label for="search" class="sr-only">Rechercher un médecin</label>
+            <input
+              type="search"
+              id="search"
+              placeholder="Rechercher un médecin (ex: Badr, Maria)..."
+              onkeyup="search()"
+              class="w-full pl-11 pr-4 py-3.5 bg-white/5 border border-white/10 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition text-white placeholder-slate-500"
+            />
+          </div>
         </div>
-  </div>
-</section>
 
+        <div>
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 border-b border-slate-800 pb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-white">Nos médecins</h3>
+              <p class="text-slate-400 text-sm">Les meilleurs spécialistes pour votre santé</p>
+            </div>
+          </div>
 
-<footer class="bg-[#2C7873] h-28 pt-2.5 grid items-center justify-center ">
-  <h3 class="text-[#fff] text-center text-[14px]"> <i class="fa-solid fa-location-dot"></i>  123 Rue de la Santé, Nador</h3>
-  <h3 class="text-[#fff] text-center text-[14px]"><i class="fa-solid fa-phone"></i> +212 769507807</h3>
-  <h3 class="text-[#fff] text-center text-[14px]" ><i class="fa-solid fa-envelope"></i> salutbadr47@gmail.com</h3>
-  <div class="h-0.5 w-2xl bg-[#dadada]"></div>
-  <p class="text-[#e3e3e3]">© 2023 Conseils Santé du Jour. Tous droits réservés.</p>
-</footer>
+          <div id="doctors-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    
+            <article class="doctor bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-black/30 border border-white/10 hover:border-teal-500/40 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+              <div class="relative h-56 overflow-hidden bg-slate-800">
+                <img src="img/A male doctor with a stethoscope on his neck.jpeg" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Dr. Badr Fenni" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur text-xs font-semibold text-teal-300 border border-white/10">CHRONOPS</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between">
+                <div class="text-center">
+                  <h3 class="header text-lg font-bold text-white mb-1 group-hover:text-teal-300 transition-colors">Dr. Badr Fenni</h3>
+                  <div class="flex items-center justify-center gap-1 text-amber-400 mb-3">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  </div>
+                  <p class="inline-flex items-center gap-2 text-slate-400 text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                    <i class="fa-solid fa-briefcase-medical text-teal-400" aria-hidden="true"></i> 15 ans d'expérience
+                  </p>
+                </div>
+                <a href="rendez.html" class="mt-6 block text-center w-full py-2.5 px-4 bg-white/5 hover:bg-teal-600 hover:text-white text-teal-300 font-semibold rounded-xl border border-white/10 hover:border-teal-600 transition-all duration-300 text-sm">
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </article>
 
-<script>
-function search() {
-      let searchBar = document.getElementById('search').value.toUpperCase();
-      let doctor = document.getElementsByClassName('doctor');
-      let DcName = document.querySelectorAll('.header');
+            <article class="doctor bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-black/30 border border-white/10 hover:border-teal-500/40 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+              <div class="relative h-56 overflow-hidden bg-slate-800">
+                <img src="img/download (3).jpeg" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Dr. Maria Tony" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur text-xs font-semibold text-teal-300 border border-white/10">Chronopédie 7/9</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between">
+                <div class="text-center">
+                  <h3 class="header text-lg font-bold text-white mb-1 group-hover:text-teal-300 transition-colors">Dr. Maria Tony</h3>
+                  <div class="flex items-center justify-center gap-1 text-amber-400 mb-3">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                  </div>
+                  <p class="inline-flex items-center gap-2 text-slate-400 text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                    <i class="fa-solid fa-briefcase-medical text-teal-400" aria-hidden="true"></i> 9 ans d'expérience
+                  </p>
+                </div>
+                <a href="rendez.html" class="mt-6 block text-center w-full py-2.5 px-4 bg-white/5 hover:bg-teal-600 hover:text-white text-teal-300 font-semibold rounded-xl border border-white/10 hover:border-teal-600 transition-all duration-300 text-sm">
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </article>
 
+            <article class="doctor bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-black/30 border border-white/10 hover:border-teal-500/40 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+              <div class="relative h-56 overflow-hidden bg-slate-800">
+                <img src="img/download (2).jpeg" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Dr. Nour Larbi" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur text-xs font-semibold text-teal-300 border border-white/10">Chronopédie 7/9</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between">
+                <div class="text-center">
+                  <h3 class="header text-lg font-bold text-white mb-1 group-hover:text-teal-300 transition-colors">Dr. Nour Larbi</h3>
+                  <div class="flex items-center justify-center gap-1 text-amber-400 mb-3">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  </div>
+                  <p class="inline-flex items-center gap-2 text-slate-400 text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                    <i class="fa-solid fa-briefcase-medical text-teal-400" aria-hidden="true"></i> 4 ans d'expérience
+                  </p>
+                </div>
+                <a href="rendez.html" class="mt-6 block text-center w-full py-2.5 px-4 bg-white/5 hover:bg-teal-600 hover:text-white text-teal-300 font-semibold rounded-xl border border-white/10 hover:border-teal-600 transition-all duration-300 text-sm">
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </article>
 
-      for (let i = 0; i < DcName.length; i++) {
-        if(DcName[i].innerHTML.toUpperCase().includes(searchBar)){
-          doctor[i].style.display = "block";
-        }
-        else{
-          doctor[i].style.display = "none";
-        }
-        
-      }
+            <article class="doctor bg-white/5 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-black/30 border border-white/10 hover:border-teal-500/40 overflow-hidden transition-all duration-300 flex flex-col justify-between group">
+              <div class="relative h-56 overflow-hidden bg-slate-800">
+                <img src="img/doctor image.jpeg" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Dr. Ahmed Khan" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur text-xs font-semibold text-teal-300 border border-white/10">Cardiologie Avancée</span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between">
+                <div class="text-center">
+                  <h3 class="header text-lg font-bold text-white mb-1 group-hover:text-teal-300 transition-colors">Dr. Ahmed Khan</h3>
+                  <div class="flex items-center justify-center gap-1 text-amber-400 mb-3">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  </div>
+                  <p class="inline-flex items-center gap-2 text-slate-400 text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                    <i class="fa-solid fa-briefcase-medical text-teal-400" aria-hidden="true"></i> 12 ans d'expérience
+                  </p>
+                </div>
+                <a href="rendez.html" class="mt-6 block text-center w-full py-2.5 px-4 bg-white/5 hover:bg-teal-600 hover:text-white text-teal-300 font-semibold rounded-xl border border-white/10 hover:border-teal-600 transition-all duration-300 text-sm">
+                  Prendre rendez-vous
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <p id="no-results" class="hidden text-center text-slate-400 mt-10">
+            Aucun médecin ne correspond à votre recherche.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 md:px-16">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 pb-8 border-b border-slate-800">
+
+        <div class="text-center md:text-left">
+          <h2 class="text-xl font-bold text-white mb-1">
+            Medi<span class="text-teal-400">Care+</span>
+          </h2>
+          <p class="text-slate-400 text-xs">Votre santé, notre priorité au quotidien.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-6 text-sm text-slate-400">
+          <span class="flex items-center gap-2 hover:text-teal-400 transition">
+            <i class="fa-solid fa-location-dot text-teal-500" aria-hidden="true"></i> 123 Rue de la Santé, Nador
+          </span>
+          <a href="tel:+212769507807" class="flex items-center gap-2 hover:text-teal-400 transition">
+            <i class="fa-solid fa-phone text-teal-500" aria-hidden="true"></i> +212 769507807
+          </a>
+          <a href="mailto:salutbadr47@gmail.com" class="flex items-center gap-2 hover:text-teal-400 transition">
+            <i class="fa-solid fa-envelope text-teal-500" aria-hidden="true"></i> salutbadr47@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <p class="text-slate-500 text-xs text-center">© 2026 MediCare+. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ============ Doctor search ============
+    function search() {
+      const query = document.getElementById('search').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.doctor');
+      const noResults = document.getElementById('no-results');
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const title = card.querySelector('.header')?.textContent.toLowerCase() ?? '';
+        const matches = title.includes(query);
+        card.style.display = matches ? 'flex' : 'none';
+        if (matches) visibleCount += 1;
+      });
+
+      noResults?.classList.toggle('hidden', visibleCount !== 0);
     }
 
+    // ============ Mobile menu ============
     const mobileMenu = document.getElementById('mobileMenu');
-    const menuBtn =document.getElementById('menuBtn');
+    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
 
-    menuBtn.addEventListener('click', () =>{
-      mobileMenu.classList.toggle('hidden');
-      burgerBtn.classList.toggle('rotate-90');
+    const openMenu = () => {
+      mobileMenu?.classList.remove('hidden');
+      mobileMenu?.classList.add('flex');
+      mobileMenuBackdrop?.classList.remove('hidden');
+      menuBtn?.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('overflow-hidden');
+    };
 
-    })
-    mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-      });
-    });
-    </script>
+    const closeMenu = () => {
+      mobileMenu?.classList.add('hidden');
+      mobileMenu?.classList.remove('flex');
+      mobileMenuBackdrop?.classList.add('hidden');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeMenuBtn?.addEventListener('click', closeMenu);
+    mobileMenuBackdrop?.addEventListener('click', closeMenu);
+    mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+    // ============ Navbar shadow on scroll ============
+    const navbar = document.getElementById('navbar');
+    const updateNavShadow = () => {
+      navbar?.classList.toggle('shadow-md', window.scrollY > 8);
+      navbar?.classList.toggle('shadow-sm', window.scrollY <= 8);
+    };
+    document.addEventListener('scroll', updateNavShadow, { passive: true });
+    updateNavShadow();
+  </script>
 </body>
 </html>
